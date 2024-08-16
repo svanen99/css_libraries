@@ -6,7 +6,6 @@ import Cards from './components/Cards';
 import LogIn from './components/LogIn';
 
 export default function RootLayout({
-  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -56,7 +55,6 @@ export default function RootLayout({
               image={randomImage}
             />
             <Button /> 
-            {children}
           </>
         )}
       </body>
