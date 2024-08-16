@@ -1,0 +1,22 @@
+const images = [
+    "/public/pepz.png",
+    "/public/pepz1.png",
+    "/public/pepz2.png",
+    "/public/pepz3.png",
+    "/public/pepz4.png",
+    "/public/pepz5.png",
+    "/public/pepz6.png",
+    "/public/pepz7.png",
+    "/public/pepz8.png",
+    "/public/pepz9.png",
+    "/public/pepz10.png",
+    "/public/pepz11.png",
+    "/public/pepz12.png",
+    "/public/pepz13.png",
+    "/public/pepz14.png",
+    "/public/pepz15.png",
+    "/public/pepz16.png",
+    "/public/pepz17.png",
+    "/public/pepz19.png",
+    "/public/pepz28.png"
+];
