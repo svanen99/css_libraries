@@ -6,9 +6,7 @@ import Cards from './components/Cards';
 import LogIn from './components/LogIn';
 
 export default function RootLayout({
-  children,
 }: Readonly<{
-  children: React.ReactNode;
 }>) {
   const [userName, setUserName] = useState<string | null>(null);
   const images = [
@@ -56,7 +54,6 @@ export default function RootLayout({
               image={randomImage}
             />
             <Button /> 
-            {children}
           </>
         )}
       </body>

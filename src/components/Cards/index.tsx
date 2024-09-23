@@ -2,7 +2,6 @@
 import styled from 'styled-components'
 
 type CardsProps = {
-    // title: string,
     content: string,
     color: string,
     active?: boolean,
