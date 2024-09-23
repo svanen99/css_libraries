@@ -5,9 +5,7 @@ import Button from './components/Button';
 import Cards from './components/Cards';
 import LogIn from './components/LogIn';
 
-export default function RootLayout({
-}: Readonly<{
-}>) {
+export default function RootLayout() {
   const [userName, setUserName] = useState<string | null>(null);
   const images = [
     "/pepz.png",
@@ -42,21 +40,19 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="en">
-      <body>
-        {!userName && <LogIn updateFunction={setUserName} />}
-        {userName && (
-          <>
-            <Header />
-            <Cards
-              content="I am glad you logged in! Press the button for more pics!"
-              color="#f86ec5"
-              image={randomImage}
-            />
-            <Button /> 
-          </>
-        )}
-      </body>
-    </html>
+    <>
+      {!userName && <LogIn updateFunction={setUserName} />}
+      {userName && (
+        <>
+          <Header />
+          <Cards
+            content="I am glad you logged in! Press the button for more pics!"
+            color="#f86ec5"
+            image={randomImage}
+          />
+          <Button />
+        </>
+      )}
+    </>
   );
 }

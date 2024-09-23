@@ -44,7 +44,7 @@ const StyledButton = styled.button`
 const Button = () => {
     return (
         <StyledButton>
-            <a href='www.google.com'>cuteness</a>
+            <a href='cute'>cuteness</a>
         </StyledButton>
     )
 }
