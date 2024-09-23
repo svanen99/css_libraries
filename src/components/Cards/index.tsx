@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 type CardsProps = {
-    title: string,
+    // title: string,
     content: string,
     color: string,
     active?: boolean,
@@ -79,11 +79,11 @@ const StyledCards = styled.div<{ color: string; active?: boolean }>`
         }
     }
 `;
-const Cards = ({ title, content, color, active, image }: CardsProps) => {
+const Cards = ({content, color, active, image }: CardsProps) => {
     return (
         <StyledCards color={color} active={active}>
             <p>{content}</p>
-            {image && <StyledImage src={image} alt={title} active={active} />}
+            {image && <StyledImage src={image} active={active} />}
         </StyledCards>
     );
 };
