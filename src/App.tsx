@@ -7,6 +7,7 @@ import LogIn from './components/LogIn';
 
 export default function RootLayout() {
   const [userName, setUserName] = useState<string | null>(null);
+  const [newImage, setNewImage] = useState<string | undefined>(undefined);
   const images = [
     "/pepz.png",
     "/pepz1.png",
@@ -30,13 +31,14 @@ export default function RootLayout() {
     "/pepz28.png"
   ];
 
-  const randomImage = images[Math.floor(Math.random() * images.length)];
+  const getRandomImage = () => setNewImage (images[Math.floor(Math.random() * images.length)]);
 
   useEffect(() => {
     const savedName = localStorage.getItem("savedUserName");
     if (savedName) {
       setUserName(JSON.parse(savedName));
     }
+    getRandomImage();
   }, []);
 
   return (
@@ -48,9 +50,9 @@ export default function RootLayout() {
           <Cards
             content="I am glad you logged in! Press the button for more pics!"
             color="#f86ec5"
-            image={randomImage}
+            image={newImage}
           />
-          <Button />
+          <Button updateFunction={getRandomImage}/>
         </>
       )}
     </>

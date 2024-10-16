@@ -1,6 +1,9 @@
 'use client'
 
 import styled from 'styled-components'
+type ButtonProps = {
+    updateFunction: () => void
+}
 
 const StyledButton = styled.button`
     background: #ffcefa;
@@ -41,10 +44,10 @@ const StyledButton = styled.button`
         }
     }
 `
-const Button = () => {
+const Button = ({updateFunction}:ButtonProps) => {
     return (
-        <StyledButton>
-            <a href='cute'>cuteness</a>
+        <StyledButton onClick={updateFunction}>
+            cuteness
         </StyledButton>
     )
 }
